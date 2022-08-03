@@ -11,7 +11,7 @@ function Cuisine() {
     let params = useParams();
 
     const getCuisine = async (name) => {
-        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=80076261beb749748238d8c5299f89bf&cuisine=${name}`);
+        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=80076261beb749748238d8c5299f89bf&cuisine=${name}&number=12`);
         const recipes = await data.json();
         setCuisine(recipes.results);
     };
@@ -37,7 +37,7 @@ function Cuisine() {
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 3rem;
 `;
 
