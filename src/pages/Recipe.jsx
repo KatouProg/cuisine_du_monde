@@ -34,14 +34,10 @@ function Recipe() {
                 <div>
                 <h4 dangerouslySetInnerHTML={{ __html: details.summary }}></h4>
                 <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
-            </div>
+                </div>
             )}
             
-            <ul>
-                {details.extendedIngredients.forEach((ingredient) => (  //Used () instead of {} because of map issue
-                    <li key={ingredient.id}>{ingredient.original}</li>
-                ))}
-            </ul>
+            
         </Info>
     </DetailWrapper>
   )
@@ -78,6 +74,15 @@ const Button = styled.button`
 
 const Info = styled.div`
     margin-left: 10rem;
+    h4{
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+        font-weight: 500;
+    }
 `;
 
 export default Recipe

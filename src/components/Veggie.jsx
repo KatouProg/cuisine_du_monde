@@ -94,6 +94,15 @@ const Card = styled.div`
         justify-content: center;
         align-items: center;
     }
+    h4{
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+        font-weight: 500;
+    }
 
 `;
 

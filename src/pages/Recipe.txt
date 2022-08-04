@@ -1,0 +1,7 @@
+   Before </Info> :         
+            
+            <ul>
+                {details.extendedIngredients.map((ingredient) => (  //Used () instead of {} because of map issue
+                    <li key={ingredient.id}>{ingredient.original}</li>
+                ))}
+            </ul>

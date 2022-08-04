@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
 //import { motion } from 'framer-motion';
 import {  useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩
 
@@ -26,8 +27,10 @@ function Cuisine() {
       {cuisine.map((item) => {
         return(
             <Card key={item.id}>
-                <img src={item.image} alt="" />
-                <h4>{item.title}</h4>
+                <Link to={"/recipe/" + item.id}>
+                    <img src={item.image} alt="" />
+                    <h4>{item.title}</h4>
+                </Link>    
             </Card>
         )
       })}
@@ -52,6 +55,13 @@ const Card = styled.div`
     h4{
         text-align: center;
         padding: 1rem;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+    p{
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+        font-weight: 500;
     }
 `;
 
