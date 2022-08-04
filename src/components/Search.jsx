@@ -1,19 +1,42 @@
 import styled from "styled-components";
+import {useEffect} from 'react';
 import {useState} from 'react';
 import {FaSearch} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
 
+
 function Search() {
     const [input, setInput] = useState("");
-    const navigate = useNavigate();
-
-    const submitHandler = (e) => {
-        e.preventDefault();
+    let navigate = useNavigate();
+   
+    const handleSubmit = (e) => {
+        e.preventDefault()
         navigate("/searched/" + input);
-    };
+        console.log('form submitted ✅');
+      };
+
+    useEffect(() => {
+        const keyDownHandler = event => {
+          //console.log('User pressed: ', event.key);
+    
+          if (event.key === 'Enter') {
+            event.preventDefault();
+
+            handleSubmit(event);
+          }
+        };
+    
+        document.addEventListener('keydown', keyDownHandler);
+    
+        return () => {
+          document.removeEventListener('keydown', keyDownHandler);
+        };
+      });
+   
 
   return (
-    <FormStyle onSubmit={submitHandler}>
+    
+    <FormStyle onSubmit={handleSubmit}>
         <div>
             <FaSearch></FaSearch>
             <input 
