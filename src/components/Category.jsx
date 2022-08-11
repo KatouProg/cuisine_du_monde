@@ -23,11 +23,11 @@ function Category() {
         <GiChopsticks />
         <h4>Chinoise</h4>
       </SLink>
-      <SLink to={'/cuisine/Mexican'}>
+      <SLink to={'/cuisine/Latin American'}>
         <GiSombrero />
-        <h4>Mexicaine</h4>
+        <h4>Latine</h4>
       </SLink>
-      <SLink to={'/cuisine/Corean'}>
+      <SLink to={'/cuisine/Korean'}>
         <GiFireBowl />
         <h4>Coréenne</h4>
       </SLink>

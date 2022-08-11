@@ -36,7 +36,16 @@ function Recipe() {
                 <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
                 </div>
             )}
-            
+            {activeTab === "ingredients" && (
+                <div className="recipeList">
+                <ul>
+                    {details.extendedIngredients.map((ingredient) => (  //Used () instead of {} because of map issue
+                        <li key={ingredient.id}>{ingredient.original}</li>
+                    ))}
+                </ul>
+            </div>
+            )}
+           
             
         </Info>
     </DetailWrapper>
@@ -55,8 +64,8 @@ const DetailWrapper = styled.div`
         margin-bottom: 2rem;
     }
     li{
-        font-size: 1.2rem;
-        line-height: 2.5rem;
+        font-size: 1rem;
+        line-height: 1.8rem;
     }
     ul{
         margin-top: 2rem;
