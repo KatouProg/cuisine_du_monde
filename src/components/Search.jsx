@@ -57,9 +57,8 @@ const FormStyle = styled.div`
     width: 100%;
     }
     input{
-        border: none;
+        border: 1px solid #29335c;
         border-radius: 1rem;
-        background: #29335c;
         font-size: 1.5rem;
         padding: 1rem 3rem;
         color: white;
@@ -71,7 +70,7 @@ const FormStyle = styled.div`
         top: 50%;
         left:0%;
         transform: translate(100%, -50%);
-        color: #F3A712;
+        color: #29335c;
     }
 `;
 

@@ -36,8 +36,8 @@ function Veggie() {
             <h3>Recettes Végé</h3>
             <Splide options={{
                 perPage: 3,
-                arrows: false,
-                pagination: false,
+                arrows: true,
+                pagination: true,
                 drag: 'free',
                 gap: '5rem',
 
@@ -63,6 +63,12 @@ function Veggie() {
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+    background: #29335c;
+    border-radius: 1rem;
+    padding: 2rem;
+    h3 {
+        color: white;
+    }
 `;
 
 const Card = styled.div`

@@ -35,9 +35,9 @@ function Popular() {
         <Wrapper>
             <h3>Recettes populaires</h3>
             <Splide options={{
-                perPage: 4,
-                arrows: false,
-                pagination: false,
+                perPage: 3,
+                arrows: true,
+                pagination: true,
                 drag: 'free',
                 gap: '5rem',
 
@@ -63,6 +63,12 @@ function Popular() {
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+    background: #29335c;
+    border-radius: 1rem;
+    padding: 2rem;
+    h3 {
+        color: white;
+    }
 `;
 
 const Card = styled.div`
