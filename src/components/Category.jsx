@@ -1,5 +1,5 @@
 import { FaHamburger } from 'react-icons/fa';
-import { GiCook, GiNoodles, GiChopsticks, GiSombrero, GiFireBowl } from 'react-icons/gi';
+import { GiCook, GiNoodles, GiChopsticks, GiIndianPalace, GiFireBowl } from 'react-icons/gi';
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 
@@ -23,9 +23,9 @@ function Category() {
         <GiChopsticks />
         <h4>Chinoise</h4>
       </SLink>
-      <SLink to={'/cuisine/Latin American'}>
-        <GiSombrero />
-        <h4>Latine</h4>
+      <SLink to={'/cuisine/Indian'}>
+        <GiIndianPalace />
+        <h4>Indienne</h4>
       </SLink>
       <SLink to={'/cuisine/Korean'}>
         <GiFireBowl />
@@ -59,23 +59,23 @@ const SLink = styled(NavLink)`
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
     h4{
-        color: white;
+        color: #b9eaf1;
         font-size: 1rem;
         font-weight: 400;
     }
 
     svg{
-        color: white;
+        color: #b9eaf1;
         font-size: 1.7rem;
     }
     &.active{
-        background: white;
-        border: 1px solid #29335C;
+        background: #b9eaf1;
+        border: none;
         h4{
-          color: #29335C;
+          color: #29335c;
         }
         svg{
-          color: #29335C;
+          color: #29335c;
         }
           
     }
