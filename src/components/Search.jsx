@@ -40,6 +40,7 @@ function Search() {
         <div>
             <FaSearch></FaSearch>
             <input 
+                placeholder="Ingrédient ou recette (en anglais) ..."
                 onChange={(e) => setInput(e.target.value)} 
                 type="text" 
                 value={input}
@@ -50,27 +51,36 @@ function Search() {
 }
 
 const FormStyle = styled.div`
-    margin: 0rem 20rem;
+    margin: 3rem 14rem;
     
     div{
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     input{
         border: 1px solid #29335c;
         border-radius: 1rem;
-        font-size: 1.5rem;
-        padding: 1rem 3rem;
-        color: white;
+        font-size: 0.8rem;
+        padding: 1rem 1.5rem;
+        color: #29335c;
         outline: none;
-        width: 100%;
+        width: 60%;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        @media (max-width: 1500px) {
+          width: 200px;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
     }
     svg{
         position: absolute;
-        top: 50%;
-        left:0%;
-        transform: translate(100%, -50%);
         color: #29335c;
+        display: none;
     }
 `;
 

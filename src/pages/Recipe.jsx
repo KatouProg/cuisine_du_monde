@@ -70,6 +70,10 @@ const DetailWrapper = styled.div`
     ul{
         margin-top: 2rem;
     }
+    img {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        border-radius: 2rem;
+    }
 `;
 
 const Button = styled.button`
@@ -77,6 +81,8 @@ const Button = styled.button`
     color: #313131;
     background: white;
     border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 1rem;
     margin-right: 2rem;
     font-weight: 500;
 `;
